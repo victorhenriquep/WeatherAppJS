@@ -1,7 +1,7 @@
 *{               /*universal selector*/
     margin: 0;   /*no margin*/
     padding: 0;  /*no padding*/
-    border: 0;      /*no margin*/
+    border: 0;      /*no border*/
     outline: none;  /*no outline*/
     box-sizing: border-box; /*indicates that the dimension of an element will also include the border and padding*/
 }
@@ -17,7 +17,7 @@ body {             /*the style of the entire application*/
 .container {        /*The style of main div (container) of the application*/
     position: relative;  /*allows you to position an element relative to its normal position in the document flow*/
     width: 400px;    /*400px for container's width*/
-    height: 105px;   /*105px for container's height*/
+    height: 605px;   /*105px for container's height*/
     background: #fff;   /*color of container's background*/
     padding: 28px 32x;   /*container's padding*/
     overflow: hidden;   /*wraps content to inside the container space*/
@@ -32,7 +32,7 @@ body {             /*the style of the entire application*/
     display: flex; /*allows you to create a flexible and responsive layout*/
     align-items: center; /*centralizes search-box elements*/
     justify-content: space-between ; /*justifies search-box content with a space between them*/
-    padding: 10px 10px;  /*padding the searchbox*/
+    padding: 30px 10px;  /*padding the searchbox*/
 }
 
 .search-box input {   /*the style of the place where we type in searchbox*/
@@ -40,6 +40,74 @@ body {             /*the style of the entire application*/
     width: 80%;    /*horizontal space in the search-box input to type in the searchbox*/
     font-size: 24px;   /*size of the font in the search-box*/
     font-weight: 500;  /*weight of the font in the search-box*/
-    text-transform: uppercase;    /*text all uppercase*/
+    text-transform: uppercase;    /*all typed text uppercased*/
     padding-left: 32px;    /*some space in the left*/
+}
+
+.search-box input::placeholder {   /*the style of the already written "Enter your location" text*/
+    font-size: 20px;    /*Pre written text Font size*/
+    font-weight: 500;   /*Pre written text Font Weight*/
+    color: #06283D;   /*Pre written text Font color*/
+    text-transform: capitalize;   /*makes the first letter of all words capitalized*/
+}
+
+.search-box button {   /*Search button's style*/
+    cursor: pointer;  /*Makes the search button clickable*/
+    width: 50px;   /*Search button size*/
+    height: 50px;  /*Search button height*/
+    color: #06283D;   /*Search button color*/
+    background: #dff6ff;   /*Background color behind the search button*/
+    border-radius: 50%;    /*Border of search button's background*/
+    font-size: 22px;     /*search button's size*/
+    transition: 0.4s ease;  /*The button's transition*/
+}
+
+.search-box button:hover {  /*When mouse is over the search button*/
+    color: #fff;   /*Color goes white*/
+    background: #06283D;    /*Background goes blue*/
+}
+
+.search-box i {  /*location button style*/
+    position: absolute; /*position the button*/
+    color: #06283D;  /*location's button color*/
+    font-size: 28px;  /*location button's size*/
+}
+
+.weather-box {  /*The style of the weather box, not coded yet!*/
+    text-align: center;  /*center-aligned weather box*/
+    
+}
+
+.weather-box img {  /*the image that shows the weather*/
+    width: 60%;  /*60% horizontal*/
+    margin-top: 30px;   /*some space in the top*/
+}
+
+.weather-box .temperature {  /*the style of the temperature details*/
+    position: relative;   /*allows you to position an element relative to its normal position in the document flow*/
+    color: #06283D;   /*color of the temperature info*/
+    font-size: 4rem;   /*font size of temperature info*/
+    font-weight: 800; /*font weight of temperature info*/
+    margin-top: 30px; /*some space in the top*/
+    margin-left: -16px; /*some space in the right*/
+}
+
+.weather-box .temperature span {  /*not coded yet*/
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box .description {  /*the style of the weather description*/
+    color: #06283D; /*color of the weather description*/
+    font-size: 22px; /*font size of the weather description*/
+    font-weight: 500; /*font weight of the weather description*/
+    text-transform: capitalize; /*makes the first letter of all words capitalized*/
+}
+
+.weather-details { /*the style of the weather details(humidity and wind speed)*/
+    width: 100%;  /*100% horizontal*/
+    display: flex; /*allows you to create a flexible and responsive layout*/
+    justify-content: space-between; /*justifies search-box content with a space between them*/
+    margin-top: 30px; /*some space in the top*/
 }
