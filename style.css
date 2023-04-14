@@ -1,0 +1,45 @@
+*{               /*universal selector*/
+    margin: 0;   /*no margin*/
+    padding: 0;  /*no padding*/
+    border: 0;      /*no margin*/
+    outline: none;  /*no outline*/
+    box-sizing: border-box; /*indicates that the dimension of an element will also include the border and padding*/
+}
+
+body {             /*the style of the entire application*/
+    height: 100vh; /*body should occupy 100% of the web browser viewport height*/
+    display: flex; /*allows you to create a flexible and responsive layout*/
+    align-items: center; /*centralize body elements*/
+    justify-content: center;   /*justifies body's content in the center*/
+    background: #06283D; /*the whole app's background color*/
+}
+
+.container {        /*The style of main div (container) of the application*/
+    position: relative;  /*allows you to position an element relative to its normal position in the document flow*/
+    width: 400px;    /*400px for container's width*/
+    height: 105px;   /*105px for container's height*/
+    background: #fff;   /*color of container's background*/
+    padding: 28px 32x;   /*container's padding*/
+    overflow: hidden;   /*wraps content to inside the container space*/
+    border-radius: 18px;  /*container border radius*/
+    font-family: 'Roboto', sans-serif;   /*container's fonts*/
+    transition: 0.6s ease-out;   /*transition when the app is opened*/
+}
+
+.search-box {    /* the style of the search box*/
+    width: 100%;  /*searchbox with 100% of the width*/
+    height: min-content; /*minimum height of searchbox is its intrinsic minimum height*/
+    display: flex; /*allows you to create a flexible and responsive layout*/
+    align-items: center; /*centralizes search-box elements*/
+    justify-content: space-between ; /*justifies search-box content with a space between them*/
+    padding: 10px 10px;  /*padding the searchbox*/
+}
+
+.search-box input {   /*the style of the place where we type in searchbox*/
+    color: #06283D;     /*color of text*/
+    width: 80%;    /*horizontal space in the search-box input to type in the searchbox*/
+    font-size: 24px;   /*size of the font in the search-box*/
+    font-weight: 500;  /*weight of the font in the search-box*/
+    text-transform: uppercase;    /*text all uppercase*/
+    padding-left: 32px;    /*some space in the left*/
+}
