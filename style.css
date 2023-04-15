@@ -6,65 +6,65 @@
     box-sizing: border-box; /*indicates that the dimension of an element will also include the border and padding*/
 }
 
-body {             /*the style of the entire application*/
+body {             /*stylizes the entire application*/
     height: 100vh; /*body should occupy 100% of the web browser viewport height*/
     display: flex; /*allows you to create a flexible and responsive layout*/
-    align-items: center; /*centralize body elements*/
-    justify-content: center;   /*justifies body's content in the center*/
+    align-items: center; /*centralizes body elements vertically*/
+    justify-content: center;   /*justifies body's content in the center, horizontally*/
     background: #06283D; /*the whole app's background color*/
 }
 
-.container {        /*The style of main div (container) of the application*/
+.container {        /*stylizes main div (container) of the application*/
     position: relative;  /*allows you to position an element relative to its normal position in the document flow*/
     width: 400px;    /*400px for container's width*/
-    height: 605px;   /*105px for container's height*/
-    background: #fff;   /*color of container's background*/
-    padding: 28px 32x;   /*container's padding*/
+    height: 105px;   /*105px for container's height*/
+    background: #fff;   /*container background color*/
+    padding: 28px 32x;   /*container padding*/
     overflow: hidden;   /*wraps content to inside the container space*/
     border-radius: 18px;  /*container border radius*/
-    font-family: 'Roboto', sans-serif;   /*container's fonts*/
+    font-family: 'Roboto', sans-serif;   /*container fonts*/
     transition: 0.6s ease-out;   /*transition when the app is opened*/
 }
 
-.search-box {    /* the style of the search box*/
-    width: 100%;  /*searchbox with 100% of the width*/
+.search-box {    /* stylizes the search box*/
+    width: 100%;  /*searchbox has 100% of the container's horizontal space*/
     height: min-content; /*minimum height of searchbox is its intrinsic minimum height*/
     display: flex; /*allows you to create a flexible and responsive layout*/
-    align-items: center; /*centralizes search-box elements*/
+    align-items: center; /*centralizes search-box elements vertically*/
     justify-content: space-between ; /*justifies search-box content with a space between them*/
-    padding: 30px 10px;  /*padding the searchbox*/
+    padding: 30px 10px;  /*search-box padding*/
 }
 
-.search-box input {   /*the style of the place where we type in searchbox*/
-    color: #06283D;     /*color of text*/
-    width: 80%;    /*horizontal space in the search-box input to type in the searchbox*/
-    font-size: 24px;   /*size of the font in the search-box*/
-    font-weight: 500;  /*weight of the font in the search-box*/
+.search-box input {   /*stylizes the place where we type in the search box*/
+    color: #06283D;     /*typed text color*/
+    width: 80%;    /*the place where we type in the search box has 100% of the container's horizontal space*/
+    font-size: 24px;   /*font size we type in the search box*/
+    font-weight: 500;  /*font weight we type in the search box*/
     text-transform: uppercase;    /*all typed text uppercased*/
-    padding-left: 32px;    /*some space in the left*/
+    padding-left: 32px;    /*some space to the left*/
 }
 
-.search-box input::placeholder {   /*the style of the already written "Enter your location" text*/
-    font-size: 20px;    /*Pre written text Font size*/
-    font-weight: 500;   /*Pre written text Font Weight*/
-    color: #06283D;   /*Pre written text Font color*/
+.search-box input::placeholder {   /*stylizes the already written "Enter your location" text*/
+    font-size: 20px;    /*pre written text font size*/
+    font-weight: 500;   /*pre written text font Weight*/
+    color: #06283D;   /*pre written text font color*/
     text-transform: capitalize;   /*makes the first letter of all words capitalized*/
 }
 
-.search-box button {   /*Search button's style*/
-    cursor: pointer;  /*Makes the search button clickable*/
-    width: 50px;   /*Search button size*/
-    height: 50px;  /*Search button height*/
-    color: #06283D;   /*Search button color*/
-    background: #dff6ff;   /*Background color behind the search button*/
-    border-radius: 50%;    /*Border of search button's background*/
+.search-box button {   /*stylizes the search button*/
+    cursor: pointer;  /*makes the search button clickable*/
+    width: 50px;   /*search button size*/
+    height: 50px;  /*search button height*/
+    color: #06283D;   /*search button color*/
+    background: #dff6ff;   /*background color behind the search button*/
+    border-radius: 50%;    /*border of search button's background*/
     font-size: 22px;     /*search button's size*/
-    transition: 0.4s ease;  /*The button's transition*/
+    transition: 0.4s ease;  /*the button's transition*/
 }
 
-.search-box button:hover {  /*When mouse is over the search button*/
-    color: #fff;   /*Color goes white*/
-    background: #06283D;    /*Background goes blue*/
+.search-box button:hover {  /*when mouse is over the search button*/
+    color: #fff;   /*icon color goes white*/
+    background: #06283D;    /*background color goes blue*/
 }
 
 .search-box i {  /*location button style*/
@@ -73,41 +73,114 @@ body {             /*the style of the entire application*/
     font-size: 28px;  /*location button's size*/
 }
 
-.weather-box {  /*The style of the weather box, not coded yet!*/
+.weather-box {  /*stylizes weather box, not coded yet!*/
     text-align: center;  /*center-aligned weather box*/
     
 }
 
 .weather-box img {  /*the image that shows the weather*/
     width: 60%;  /*60% horizontal*/
-    margin-top: 30px;   /*some space in the top*/
+    margin-top: 30px;   /*some space up*/
 }
 
-.weather-box .temperature {  /*the style of the temperature details*/
+.weather-box .temperature {  /*stylizes temperature details*/
     position: relative;   /*allows you to position an element relative to its normal position in the document flow*/
     color: #06283D;   /*color of the temperature info*/
     font-size: 4rem;   /*font size of temperature info*/
     font-weight: 800; /*font weight of temperature info*/
-    margin-top: 30px; /*some space in the top*/
-    margin-left: -16px; /*some space in the right*/
+    margin-top: 30px; /*some space up*/
+    margin-left: -16px; /*some space to the right*/
 }
 
-.weather-box .temperature span {  /*not coded yet*/
-    position: absolute;
-    margin-left: 4px;
-    font-size: 1.5rem;
+.weather-box .temperature span {  /*temperature results > not coded yet <*/
+    position: absolute; /*the temperature results will be taken out of the normal document flow and positioned based on its top, right, bottom, and left properties.*/
+    margin-left: 4px;  /*some outer space on the left*/
+    font-size: 1.5rem; /*font size of temperature results setted to 1.5 times*/
 }
 
-.weather-box .description {  /*the style of the weather description*/
+.weather-box .description {  /*stylizes the weather description*/
     color: #06283D; /*color of the weather description*/
     font-size: 22px; /*font size of the weather description*/
     font-weight: 500; /*font weight of the weather description*/
     text-transform: capitalize; /*makes the first letter of all words capitalized*/
 }
 
-.weather-details { /*the style of the weather details(humidity and wind speed)*/
+.weather-details { /*stylizes the weather details(humidity and wind speed)*/
     width: 100%;  /*100% horizontal*/
     display: flex; /*allows you to create a flexible and responsive layout*/
     justify-content: space-between; /*justifies search-box content with a space between them*/
-    margin-top: 30px; /*some space in the top*/
+    margin-top: 30px; /*some space up*/
+}
+
+.weather-details .humidity, .weather-details .wind {   /*stylizes all the elements of humidity and wind*/
+    display: flex; /*allows you to create a flexible and responsive layout*/
+    align-items: center;   /*aligns the child elements vertically within the container*/
+    width: 50%;    /*50% of its containing element horizontally*/
+    height: 100px;  /*100 pixels height*/
+}
+
+.weather-details .humidity {  /*stylizes just the humidity elements*/
+    padding-left: 20px;   /*some space to the left*/
+    justify-content: flex-start;  /*humidity elements aligned to the left of the container*/
+}
+
+.weather-details .wind {  /*stylizes just the wind elements*/
+    padding-right: 20px;  /*some space to the right*/
+    justify-content: flex-end; /*wind elements aligned to the right of the container*/
+}
+
+.weather-details i {   /*stylizes the humidity and wind icons*/
+    color: #06283D;  /*humidity and wind icons colors*/
+    font-size: 26px;  /*humidity and wind icons size*/
+    margin-right: 10px; /*some external space to the right*/
+    margin-top: 6px;   /*some external space up*/
+}
+
+.weather-details span { /*stylizes the data we will show later*/
+    color: #06283D;  /*color of data*/
+    font-size: 22px;   /*font size of data*/
+    font-weight: 500;  /*font weight of data*/
+}
+
+.weather-details p {  /*stylizes humidity and wind text*/
+    color: #06283D;  /*color of humidity and wind text*/
+    font-size: 14px; /*font size of humidity and wind text*/
+    font-weight: 500;  /*font weight of humidity and wind text*/
+}
+
+.not-found {  /**stylizes not-found page*/
+    width: 100%;  /*100% of its containing element horizontally*/
+    text-align: center;  /*centralized*/
+    margin-top: 50px;   /*some space up*/
+    scale: 0;   /*not-found page is invisible*/
+    opacity: 0;  /*not-found page is invisible*/ 
+    display: none;  /*not-found page is invisible and removed from the layout flow*/
+}
+
+.not-found img {  /**stylizes not-found image*/
+    width: 70%;  /*not-found image will take up 70% of the available width in the container*/
+}
+
+.not-found p {  /*stylizes 'invalid location' text*/
+    color: #06283D; /*invalid location text color*/
+    font-size: 22px; /*invalid location text font size*/
+    font-weight: 500; /*invalid location text font weight*/
+    margin-top: 12px; /*some external space up*/
+}
+
+.weather-box, .weather-details {  /*stylizes weather-box (searchs results and humidity and wind details*/
+    scale: 0; /*results, humidity and wind are invisible*/
+    opacity: 0; /*results, humidity and wind are invisible*/
+}
+
+.fade-in {  /*selects the target which the animation will be applied*/
+    animation: 0.5s fadeIn forwards; /*0.5s duration // keyframe name // the element will retain its final state after the animation ends*/
+    animation-delay: 0.5s; /*0.5 seconds before the animation starts*/
+}
+
+@keyframes fadeIn { /*the start of the keyframe animation*/
+    to {  /*specifies the final state of the animation*/
+        scale: 1; /*will be at its normal size after the animation*/
+        opacity: 1; /*will be fully visible after the animation*/
+    }
 }
