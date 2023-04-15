@@ -158,12 +158,12 @@ body {             /*stylizes the entire application*/
 }
 
 .not-found img {  /**stylizes not-found image*/
-    width: 70%;  /*not-found image will take up 70% of the available width in the container*/
+    width: 40%;  /*not-found image will take up 70% of the available width in the container*/
 }
 
 .not-found p {  /*stylizes 'invalid location' text*/
     color: #06283D; /*invalid location text color*/
-    font-size: 22px; /*invalid location text font size*/
+    font-size: 20px; /*invalid location text font size*/
     font-weight: 500; /*invalid location text font weight*/
     margin-top: 12px; /*some external space up*/
 }

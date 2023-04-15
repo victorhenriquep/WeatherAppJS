@@ -3,6 +3,8 @@ const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
+const inputField = document.getElementById("input-field");
+const myButton = document.getElementById("my-button");
 
 search.addEventListener('click', () => {
 
@@ -12,7 +14,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}&lang={pt_br}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
 
@@ -71,6 +73,10 @@ search.addEventListener('click', () => {
                 image.src = 'assets/img/mist.png';
                 break;
 
+            case 'overcast clouds':
+                image.src = 'assets/img/overcastclouds.png';
+                break;
+
             default:
                 image.src = '';
         }
@@ -87,4 +93,10 @@ search.addEventListener('click', () => {
         container.style.height = '590px';
 
     });
+});
+
+inputField.addEventListener("keydown", function(event) {    //when pressing enter, the search button will be clicked
+    if(event.key === "Enter") {    //if the key pressed is 'enter'
+        myButton.click();         //search button is clicked
+    }
 });
