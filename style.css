@@ -18,7 +18,7 @@ body {             /*stylizes the entire application*/
     position: relative;  /*allows you to position an element relative to its normal position in the document flow*/
     width: 400px;    /*400px for container's width*/
     height: 105px;   /*105px for container's height*/
-    background: #fff;   /*container background color*/
+    background: #fffefe;   /*container background color*/
     padding: 28px 32x;   /*container padding*/
     overflow: hidden;   /*wraps content to inside the container space*/
     border-radius: 18px;  /*container border radius*/
@@ -79,7 +79,7 @@ body {             /*stylizes the entire application*/
 }
 
 .weather-box img {  /*the image that shows the weather*/
-    width: 60%;  /*60% horizontal*/
+    width: 30%;  /*60% horizontal*/
     margin-top: 30px;   /*some space up*/
 }
 
@@ -173,7 +173,7 @@ body {             /*stylizes the entire application*/
     opacity: 0; /*results, humidity and wind are invisible*/
 }
 
-.fade-in {  /*selects the target which the animation will be applied*/
+.fadeIn {  /*selects the target which the animation will be applied*/
     animation: 0.5s fadeIn forwards; /*0.5s duration // keyframe name // the element will retain its final state after the animation ends*/
     animation-delay: 0.5s; /*0.5 seconds before the animation starts*/
 }
